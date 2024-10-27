@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Dots Adventure</title>
+</head>
+<body style="background-color: #e0f7fa; font-family: Arial, sans-serif; text-align: center;">
+
+    <audio id="backgroundMusic" loop>
+        <source src="your-audio-file-url.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="startPage" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+        <h1>Welcome to Join the Dots Adventure!</h1>
+        <p>Connect the dots in numerical order to reveal a picture.</p>
+        <p>Follow the numbers and click on each dot in sequence. The more levels you complete, the more challenging the game becomes!</p>
+        <p>Click "Start" to begin your adventure!</p>
+        <button id="startButton" style="margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Start Game</button>
+    </div>
+
+    <div id="gamePage" style="display: none;">
+        <canvas id="dotCanvas" width="500" height="500" style="border: 2px solid #00796b; background-color: #ffffff;"></canvas>
+        <div id="timerDisplay" style="font-size: 20px; margin: 10px;">Time left: 30 seconds</div>
+        <button id="resetButton" style="margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Reset</button>
+        <p id="instructions" style="font-size: 18px; margin: 10px;">Click 'Start' to begin connecting the dots!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

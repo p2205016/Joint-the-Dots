@@ -1,0 +1,34 @@
+body {
+    background-color: #e0f7fa;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.start-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-page {
+    display: none; /* Hide game page by default */
+}
+
+canvas {
+    border: 2px solid #00796b;
+    background-color: #ffffff;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+p {
+    margin: 10px;
+    font-size: 18px;
+}
