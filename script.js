@@ -17,7 +17,7 @@ const levels = [
     { count: 8 }  // Level 6 - 8 dots
 ];
 
-// Function to generate a random color
+//generate a random color
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
     let color = '#';
