@@ -137,7 +137,8 @@ canvas.addEventListener('click', (event) => {
     const currentDot = dots[currentDotIndex];
     const distance = Math.hypot(currentDot.x - x, currentDot.y - y);
 
-    if (distance < 20) {
+    
+    if (distance < 20  ) {
         // Draw line to the dot
         if (currentDotIndex > 0) {
             ctx.beginPath();
@@ -153,20 +154,24 @@ canvas.addEventListener('click', (event) => {
 
         // Check if the level is completed
         if (currentDotIndex === dots.length) {
-            level++;
-            clearInterval(timer); 
-            if (level < levels.length) {
-                document.getElementById('instructions').textContent = "Level completed! Next level.";
-                setTimeout(() => {
+            clearInterval(timer); // Stop the timer
+            document.getElementById('instructions').textContent = `Level ${level + 1} completed! Click to continue to the next level.`;
+            setTimeout(() => {
+                level++;
+                if (level < levels.length) {
                     createRandomDots(levels[level].count);
                     currentDotIndex = 0;
-                    startTimer(); 
-                }, 2000);
-            } else {
-                drawing = false;
-                document.getElementById('instructions').textContent = "You completed all levels!";
-                document.getElementById('resetButton').disabled = false; // Enable reset button
-            }
+                    document.getElementById('instructions').textContent = `Level ${level + 1}: Connect the dots in order!`;
+                    startTimer(); // Restart the timer for the next level
+                } else {
+                    drawing = false;
+                    document.getElementById('instructions').textContent = "You completed all levels! Great job!";
+                    document.getElementById('resetButton').disabled = false; // Enable reset button
+                }
+            }, 2000); // Delay before moving to the next level
         }
+    } else {
+        // Show error message for incorrect click
+        document.getElementById('instructions').textContent = "Incorrect dot! Click the next dot in order.";
     }
 });
