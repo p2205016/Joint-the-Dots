@@ -9,16 +9,20 @@
 
     <audio id="backgroundMusic" loop>
         <source src="http://music.163.com/song/media/outer/url?id=413812997.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
     </audio>
 
     <div id="startPage" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+        <h1>p2205016</h1>
         <h1>Welcome to Join the Dots Adventure!</h1>
+        <h1>&ensp;</h1>
         <p>Connect the dots in numerical order to reveal a picture.</p>
         <p>Follow the numbers and click on each dot in sequence. The more levels you complete, the more challenging the game becomes!</p>
+        <h1>&ensp;</h1><h1>&ensp;</h1>
         <p>Click "Start" to begin your adventure!</p>
         <button id="startButton" style="margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Start Game</button>
     </div>
+    
+    <div id="instructions" style="font-size: 18px; margin: 10px;">Click 'Start' to begin connecting the dots!</div>
 
     <div id="gamePage" style="display: none;">
         <canvas id="dotCanvas" width="500" height="500" style="border: 2px solid #00796b; background-color: #ffffff;"></canvas>
@@ -26,6 +30,20 @@
         <button id="resetButton" style="margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Reset</button>
         <p id="instructions" style="font-size: 18px; margin: 10px;">Click 'Start' to begin connecting the dots!</p>
     </div>
+
+    <style>
+        
+
+        #timerDisplay {
+            font-size: 24px; /* Increased font size */
+            margin: 10px;
+            color: #ff5722; /* Contrasting color */
+            font-weight: bold; /* Make it bold for better visibility */
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: add a background for better contrast */
+            padding: 5px; /* Add some padding around the text */
+            border-radius: 5px; /* Round corners for a softer look */
+        }
+    </style>
 
     <script src="script.js"></script>
 </body>
