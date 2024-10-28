@@ -69,7 +69,7 @@ function drawDots() {
 
 // Timer 
 function startTimer() {
-    timeLeft = 30; 
+    timeLeft = 30; // Reset to 30 seconds
     const timerDisplay = document.getElementById('timerDisplay');
     
     timer = setInterval(() => {
@@ -77,8 +77,14 @@ function startTimer() {
             clearInterval(timer);
             drawing = false;
             document.getElementById('instructions').textContent = "Time's up! Game over!";
-            document.getElementById('resetButton').disabled = false;
+            document.getElementById('resetButton').disabled = false; // Enable reset button
         } else {
+            // Change text color based on remaining time
+            if (timeLeft <= 10) {
+                timerDisplay.style.color = 'red'; // Change to red for the last 10 seconds
+            } else {
+                timerDisplay.style.color = '#FFD700'; // Gold color for normal countdown
+            }
             timerDisplay.textContent = `Time left: ${timeLeft--} seconds`;
         }
     }, 1000);
