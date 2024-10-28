@@ -19,6 +19,8 @@ body {
 canvas {
     border: 2px solid #00796b;
     background-color: #ffffff;
+    width: 100%;
+    height: auto;
 }
 
 button {
@@ -31,4 +33,12 @@ button {
 p {
     margin: 10px;
     font-size: 18px;
+}
+
+#dotCanvas {
+    width: 80%; /* Set canvas width to 80% of its parent */
+    height: auto; /* Height will adjust automatically */
+    max-width: 500px; /* Maximum width for larger screens */
+    border: 2px solid #00796b;
+    background-color: #ffffff;
 }
